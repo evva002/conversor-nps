@@ -13,9 +13,9 @@ for coluna in colunas_alvo:
     if planilha[coluna].notna().sum() != planilha[coluna].count():
         print(f'Atenção: A coluna {coluna} contém valores inválidos (ex: texto que não é número).')
 
-for col in colunas_alvo:
-    planilha[col] = planilha[col].dropna().astype(int)
-    planilha[col] = planilha[col].astype('Int64')
+for coluna in colunas_alvo:
+    planilha[coluna] = planilha[coluna].dropna().astype(int)
+    planilha[coluna] = planilha[coluna].astype('Int64')
 
 planilha.to_csv('dados_para_discador.csv', index=False)
 
