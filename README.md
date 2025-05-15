@@ -80,33 +80,9 @@ nome_original_do_arquivo.csv
 3. Os .csv processados serão salvos na pasta "pos-processamento"
 
 ---------------------------------------
-6. REQUISITOS (APENAS SE FOR USAR COM PYTHON)
----------------------------------------
-
-- Python 3.x instalado
-- Bibliotecas:
-  - pandas
-  - openpyxl
-
-Instale com:
-pip install pandas openpyxl
-
----------------------------------------
-7. COMPILAR PARA EXE (OPCIONAL)
----------------------------------------
-
-Se quiser transformar em um programa executável:
-
-Use PyInstaller:
-pyinstaller --onefile --noconsole main.py
-
-O .exe gerado estará na pasta "dist".
-
----------------------------------------
 DÚVIDAS OU ERROS?
 ---------------------------------------
-- Para somente utilizar o programa e o conversor.exe, copiar a pasta conversor_nps.zip e colar no local desejado
-(de preferencia no disco C)!
+- Para utilizar o conversor.exe, extrair a pasta conversor_nps.zip e colar a pasta extraida no local desejado.
 
 Se o programa disser que não encontrou arquivos ou pastas:
 - Verifique se as pastas estão no mesmo local que o .exe
