@@ -6,12 +6,13 @@ from tkinter import messagebox
 colunas_alvo = ['COD_CPF_CGC', 'FONE_1', 'FONE_2', 'FONE_3', 'FONE_4']
 
 def iniciar_processo_conversao():
+
     if getattr(sys, 'frozen', False):
-    # Estamos rodando como .exe
         pasta_base = os.path.dirname(sys.executable)
+
     else:
-    # Rodando como script .py
         pasta_base = os.path.dirname(os.path.abspath(__file__))
+
     pasta_entrada = os.path.join(pasta_base, 'pre-processamento')
     pasta_saida = os.path.join(pasta_base, 'pos-processamento')
 
@@ -47,7 +48,7 @@ def iniciar_processo_conversao():
         ('NPS5', 'NPS5.csv'),
         ('NPS4', 'NPS4.csv'),
         ('NPS3', 'NPS3.csv'),
-        ('NPS', 'NPS2.csv'),  # Coloque "NPS" por último para não pegar antes dos outros
+        ('NPS', 'NPS2.csv'),
     ]
 
     for arquivo in arquivos:
