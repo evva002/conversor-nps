@@ -1,22 +1,11 @@
-import pandas 
+import tkinter as tk
+from conversor import iniciar_processo_conversao
 
-arquivo_entrada = 'dados.xlsx'
+# Interface simples
+janela = tk.Tk()
+janela.title("Conversor de NPS")
+janela.geometry("300x150")
 
-colunas_alvo = ['COD_CPF_CGC', 'FONE_1', 'FONE_2', 'FONE_3', 'FONE_4']
+tk.Button(janela, text="Converter arquivos", command=iniciar_processo_conversao, height=2, width=30).pack(pady=40)
 
-planilha = pandas.read_excel(arquivo_entrada)
-
-for coluna in colunas_alvo:
-    planilha[coluna] = pandas.to_numeric(planilha[coluna], errors='coerce')
-
-for coluna in colunas_alvo:
-    if planilha[coluna].notna().sum() != planilha[coluna].count():
-        print(f'Atenção: A coluna {coluna} contém valores inválidos (ex: texto que não é número).')
-
-for coluna in colunas_alvo:
-    planilha[coluna] = planilha[coluna].dropna().astype(int)
-    planilha[coluna] = planilha[coluna].astype('Int64')
-
-planilha.to_csv('dados_para_discador.csv', index=False)
-
-print('Processo concluído!')
+janela.mainloop()
