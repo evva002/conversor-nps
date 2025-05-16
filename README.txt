@@ -66,7 +66,7 @@ NPS6                      → NPS6.csv
 NPS5                      → NPS5.csv
 NPS4                      → NPS4.csv
 NPS3                      → NPS3.csv
-NPS                       → NPS2.csv  ← (só "NPS" por último)
+NPS2                      → NPS2.csv  
 
 Se o nome não combinar com nenhum dos acima, será salvo como:
 nome_original_do_arquivo.csv
